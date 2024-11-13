@@ -25,14 +25,14 @@ export default function Home() {
     <div className="min-h-screen bg-gradient-to-b from-gray-900 to-gray-800 text-gray-100">
       <header className={`fixed w-full z-50 transition-all duration-300 ${scrollPosition > 50 ? 'bg-gray-900 shadow-lg' : 'bg-transparent'}`}>
         <div className="container mx-auto px-4 py-4 flex justify-between items-center">
-          <Link href="/" className="text-2xl font-bold text-blue-500">
+          <Link href="/" className="text-2xl font-bold text-red-500">
             Vessel México
           </Link>
           <nav className="hidden md:flex space-x-6 items-center">
             <Link href="#beneficios" className="text-gray-300 hover:text-white transition duration-300">Beneficios</Link>
             <Link href="#modelos" className="text-gray-300 hover:text-white transition duration-300">Modelos</Link>
             <Link href="#testimonios" className="text-gray-300 hover:text-white transition duration-300">Testimonios</Link>
-            <Button asChild variant="default" className="bg-blue-600 hover:bg-blue-700">
+            <Button asChild variant="default" className="bg-red-600 hover:bg-red-700">
               <Link href="#contacto">Cotizar ahora</Link>
             </Button>
           </nav>
@@ -48,7 +48,7 @@ export default function Home() {
             <Link href="#beneficios" className="text-2xl text-gray-300 hover:text-white transition duration-300" onClick={() => setIsMenuOpen(false)}>Beneficios</Link>
             <Link href="#modelos" className="text-2xl text-gray-300 hover:text-white transition duration-300" onClick={() => setIsMenuOpen(false)}>Modelos</Link>
             <Link href="#testimonios" className="text-2xl text-gray-300 hover:text-white transition duration-300" onClick={() => setIsMenuOpen(false)}>Testimonios</Link>
-            <Button asChild variant="default" className="bg-blue-600 hover:bg-blue-700" onClick={() => setIsMenuOpen(false)}>
+            <Button asChild variant="default" className="bg-red-600 hover:bg-red-700" onClick={() => setIsMenuOpen(false)}>
               <Link href="#contacto">Cotizar ahora</Link>
             </Button>
           </nav>
@@ -58,11 +58,14 @@ export default function Home() {
       <main>
         <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
           <div className="absolute inset-0 z-0">
-            <video autoPlay loop muted playsInline className="w-full h-full object-cover">
-              <source src="/placeholder.mp4" type="video/mp4" />
-              Tu navegador no soporta el tag de video.
-            </video>
-            <div className="absolute inset-0 bg-black opacity-60"></div>
+            <div className="relative h-full w-full">
+              <img
+                src="https://modernprefabs.com/wp-content/uploads/vessel-houses-prefab-home-exterior-deck-scaled.jpg"
+                alt="Contenedor inteligente Vessel en un entorno moderno"
+                className="object-cover w-full h-full"
+              />
+              <div className="absolute inset-0 bg-black opacity-60"></div>
+            </div>
           </div>
           <div className="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto">
             <h1 className="text-5xl sm:text-6xl md:text-7xl font-extrabold text-white mb-6 animate-fade-in-down">
@@ -71,7 +74,7 @@ export default function Home() {
             <p className="text-xl sm:text-2xl md:text-3xl text-gray-300 mb-10 animate-fade-in-up">
               Contenedores inteligentes desde $30,000 USD. Tecnología, comodidad y sustentabilidad en un solo lugar.
             </p>
-            <Button asChild size="lg" className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-full text-lg font-semibold transition duration-300 transform hover:scale-105">
+            <Button asChild size="lg" className="bg-red-600 hover:bg-red-700 text-white px-8 py-4 rounded-full text-lg font-semibold transition duration-300 transform hover:scale-105">
               <Link href="#contacto">Descubre el Futuro de la Vivienda</Link>
             </Button>
             <div className="mt-12 animate-bounce">
@@ -137,7 +140,7 @@ export default function Home() {
                     <CardDescription>Perfecto para individuos o parejas</CardDescription>
                   </CardHeader>
                   <CardContent>
-                    <img src="/placeholder.svg?height=300&width=400&text=Modelo+Básico" alt="Modelo Básico Vessel" className="w-full h-64 object-cover rounded-lg mb-4" />
+                    <img src="https://media.es.wired.com/photos/669ea491863afeef2283fab4/master/w_1600%2Cc_limit/840b7ef5e775c22a51c4e04638584810.jpeg" alt="Modelo Básico Vessel" className="w-full h-64 object-cover rounded-lg mb-4" />
                     <ul className="space-y-2">
                       <li className="flex items-center"><Check className="mr-2 h-5 w-5 text-green-500" /> Cocina equipada</li>
                       <li className="flex items-center"><Check className="mr-2 h-5 w-5 text-green-500" /> Baño completo</li>
@@ -213,7 +216,7 @@ export default function Home() {
                     </CardTitle>
                   </CardHeader>
                   <CardContent>
-                    <p className="italic text-gray-200">&quot;Vessel ha transformado completamente mi concepto de hogar. La tecnología y el diseño son impresionantes.&quot;</p>
+                    <p className="italic text-gray-200">"Vessel ha transformado completamente mi concepto de hogar. La tecnología y el diseño son impresionantes."</p>
                   </CardContent>
                   <CardFooter>
                     <p className="font-semibold text-white">- Cliente Satisfecho {i}</p>
@@ -224,12 +227,12 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="contacto" className="py-20 bg-blue-600">
+        <section id="contacto" className="py-20 bg-red-600">
           <div className="container mx-auto px-4 text-center">
             <h2 className="text-4xl font-bold text-white mb-8">¿Listo para Revolucionar tu Concepto de Vivienda?</h2>
             <p className="text-xl text-white mb-8">Contáctanos hoy y descubre cómo Vessel puede transformar tu vida.</p>
-            <Button asChild size="lg" variant="secondary" className="text-blue-600 bg-white hover:bg-gray-100">
-              <Link href="/" className="flex items-center">
+            <Button asChild size="lg" variant="secondary" className="text-red-600 bg-white hover:bg-gray-100">
+              <Link href="/contacto" className="flex items-center">
                 Solicita tu Cotización Personalizada <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
             </Button>
@@ -242,9 +245,9 @@ export default function Home() {
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-gray-400">&copy; 2024 Vessel México. Todos los derechos reservados.</p>
             <nav className="flex space-x-4 mt-4 md:mt-0">
-              <Link href="/" className="text-gray-400 hover:text-white transition duration-300">Privacidad</Link>
-              <Link href="/" className="text-gray-400 hover:text-white transition duration-300">Términos</Link>
-              <Link href="/" className="text-gray-400 hover:text-white transition duration-300">Blog</Link>
+              <Link href="/privacidad" className="text-gray-400 hover:text-white transition duration-300">Privacidad</Link>
+              <Link href="/terminos" className="text-gray-400 hover:text-white transition duration-300">Términos</Link>
+              <Link href="/blog" className="text-gray-400 hover:text-white transition duration-300">Blog</Link>
             </nav>
           </div>
         </div>
